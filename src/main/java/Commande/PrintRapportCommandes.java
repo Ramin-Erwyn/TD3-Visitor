@@ -6,8 +6,11 @@ import Visitors.*;
 
 public class PrintRapportCommandes implements Visitor{
     public Map<String,Integer> bill;
-
-    public PrintRapportCommandes() {  }
+    private int prix_courant = 0;
+    public PrintRapportCommandes() {
+        bill = new HashMap<String,Integer>();
+        prix_courant = 0;
+    }
 
     @Override
     public void visit(GroupeClient g) {
@@ -17,7 +20,7 @@ public class PrintRapportCommandes implements Visitor{
     @Override
     public void visit(Client c) {
         System.out.println(String.format("je visite un client %s",c.getName()));
-
+    prix_courant =0;
     }
 
     @Override
@@ -29,6 +32,7 @@ public class PrintRapportCommandes implements Visitor{
     @Override
     public void visit(Ligne l){
         System.out.println(String.format("je visite une ligne %s",l.getName()));
+        prix_courant += l.getSum();
 
     }
 }
