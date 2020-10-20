@@ -1,4 +1,27 @@
 package Visitors;
 
-public class Client {
+import java.util.HashMap;
+import java.util.Map;
+import Commande.AbstactVisitor;
+import Commande.Visitor;
+import Commande.PrePostVisitor;
+
+
+public class Client implements PrePostVisitable, Visitable {
+
+    private String name;
+    protected Map<String,Commande> commandes ;
+
+    public Client(String name){}
+
+    public String getName(){return this.name;}
+
+    public void addCommande(Commande c){}
+
+    public void addLigne(String commande , Ligne l){ }
+
+    public void accept(PrePostVisitor visitor) {}
+
+    @Override
+    public void accept(Visitor visitor){}
 }
