@@ -2,9 +2,7 @@ package Visitors;
 
 import java.util.HashMap;
 import java.util.Map;
-import Commande.AbstactVisitor;
-import Commande.Visitor;
-import Commande.PrePostVisitor;
+import Commande.*;
 
 
 public class Client implements PrePostVisitable, Visitable {
