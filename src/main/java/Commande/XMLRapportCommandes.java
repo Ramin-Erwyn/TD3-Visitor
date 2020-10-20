@@ -1,6 +1,6 @@
 package Commande;
 import Visitors.*;
-public abstract class XMLRapportCommandes implements PrePostVisitor {
+public class XMLRapportCommandes implements PrePostVisitor {
     @Override
     public void preVisit(GroupeClient g) {
 

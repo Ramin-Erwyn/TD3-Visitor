@@ -1,6 +1,6 @@
 package Visitors;
 import Commande.*;
-public abstract class Ligne implements PrePostVisitable, Visitable {
+public class Ligne implements PrePostVisitable, Visitable {
     private String name;
     private int sum;
 

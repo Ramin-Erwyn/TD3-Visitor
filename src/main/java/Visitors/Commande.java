@@ -4,7 +4,7 @@ import Commande.*;
 import java.util.HashMap;
 import java.util.Map;
 
-public abstract class Commande implements PrePostVisitable, Visitable{
+public class Commande implements PrePostVisitable, Visitable{
     private String name;
     private Map<String,Ligne> lignes;
 

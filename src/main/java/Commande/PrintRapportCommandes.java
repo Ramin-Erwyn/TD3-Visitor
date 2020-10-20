@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import Visitors.*;
 
-public abstract class PrintRapportCommandes implements Visitor{
+public class PrintRapportCommandes implements Visitor{
     public Map<String,Integer> bill;
 
     public PrintRapportCommandes() {  }
